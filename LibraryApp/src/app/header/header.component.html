@@ -1,0 +1,36 @@
+
+  <nav class="navbar navbar-expand-lg navbar-bright">
+    <div class="container-fluid navbar-header" >
+      <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+      <button class="navbar-toggler  navbar-dark" style="background-color: rgba(58, 4, 255, 0);" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLink="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/books" *ngIf="_auth.loggedIn()" >Books</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/authors" *ngIf="_auth.loggedIn()">Authors</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/login" *ngIf="!_auth.loggedIn()">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/register" *ngIf="!_auth.loggedIn()">Register</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/logout" *ngIf="_auth.loggedIn()" (click)="logoutUser()">Logout</a>
+          </li>
+          
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-primary" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>

@@ -1,0 +1,134 @@
+<div id="masthead">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7">
+                <h1>Authors
+                    <p class="lead"></p>
+                </h1>
+            </div>
+            <div class="col-md-5">
+                <div class="well well-lg">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <p id="quote">" Nothing is Pleasanter than exploring a Library "</p>
+                            <p id="quote1">-Walter Savage Landor</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- /cont -->
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="top-spacer"> </div>
+            </div>
+        </div>
+    </div><!-- /cont -->
+
+</div>
+
+
+<div class="container">
+    <div class="row">
+
+        <div class="col-md-12">
+
+            <div class="panel">
+                <div class="panel-body">
+
+                    <div class="row">
+                        
+                        <!-- add -->
+                        <div class="center">
+                            <h1>Add New Author</h1>
+                            <form (ngSubmit)="addAuthor()" method="POST" [formGroup]="authorForm">
+                                <div class="txt_field">
+                                    <input type="text" name="name" formControlName="name" required>
+                                    <span></span>
+                                    <label>Name</label>
+                                </div>
+                                <div class="txt_field">
+                                    <input type="text" name="nationality" formControlName="nationality" required>
+                                    <span></span>
+                                    <label>Nationality</label>
+                                </div>
+                                <div class="txt_field">
+                                    <input type="text" name="genre" formControlName="genre" required>
+                                    <span></span>
+                                    <label>Genre</label>
+                                </div>
+                                <div class="txt_field">
+                                    <input type="text" name="works" formControlName="works" required>
+                                    <span></span>
+                                    <label>Notable Works</label>
+                                </div>
+                                <div>
+                                    <label id="book_img">Add Author Image</label>
+                                    <br>
+
+                                    <input type="file" accept="image/*" name="image" (change)="selectImage($event)" required>
+                                    <br>
+                                    <br>
+                                </div>
+                                <button type="submit" id="submit" value="Add Author">Add Author</button>
+                                <br>
+                                <br>
+                                <br>
+
+                            </form>
+                        </div>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                       
+                        
+                    </div>
+
+                    <!-- add -->
+
+
+
+
+
+                </div>
+            </div>
+
+            <hr>
+
+
+        </div>
+        <!--/col-12-->
+
+    </div>
+</div>

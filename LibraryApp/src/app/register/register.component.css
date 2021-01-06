@@ -1,0 +1,7 @@
+.msg-box{
+    float: right;
+    display:inline;
+    position:absolute;
+    top: 30%;
+    left: 68%;
+}

@@ -1,0 +1,4 @@
+$carousel-transition {
+    transition: transform 1s ease !important;
+     opacity: .5s ease-out;
+}

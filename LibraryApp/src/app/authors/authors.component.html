@@ -1,0 +1,95 @@
+<div id="masthead">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7">
+                <h1>Authors
+                    <p class="lead"></p>
+                </h1>
+            </div>
+            <div class="col-md-5">
+                <div class="well well-lg">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <p id="quote">" I have found the most valuable thing in my wallet is my library card "</p>
+                            <p id="quote1">-Laura Bush</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- /cont -->
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="top-spacer"> </div>
+            </div>
+        </div>
+    </div><!-- /cont -->
+
+</div>
+
+
+<div class="container">
+    <div class="row">
+
+        <div class="col-md-12">
+
+            <div class="panel">
+                <div class="panel-body">
+
+
+
+                    <!--/stories-->
+                        <div class="row" *ngFor="let author of authors">
+                            <br>
+                            <div class="col-md-2 col-sm-3 text-center">
+                                <a class="story-title" href="#"><img alt="" src='../../assets/Images/{{author.image}}'
+                                        style="width:100px;height:100px" class="rounded-circle"></a>
+                            </div>
+                            <div class="col-md-10 col-sm-9">
+                                <h3>
+                                    {{author.name}}
+                                </h3>
+                                <div class="row">
+                                    <div class="col-xs-9">
+                                        <h4><span class="label label-default">
+                                            {{author.genre}}
+                                            </span></h4>
+                                        <h4>
+                                            <small style="font-family:courier,'new courier';" class="text-muted">
+                                                {{author.nationality}} • <a (click)="viewAuthor(author)" style="cursor: pointer;"
+                                                        class="text-muted">Read More</a>
+                                            </small>
+                                        </h4>
+                                    </div>
+                                    <div class="col-xs-3"></div>
+                                </div>
+                                <br><br>
+                            </div>
+                        </div>
+                        <div class="d-grid gap-2 col-3 mx-auto">
+                            <button class="btn btn-primary" routerLink="/addAuthor" style="background-color: #111166;" type="button" *ngIf="_auth.loggedIn() && _auth.getAdmin()">Add Author</button>
+                          </div> 
+                            <hr>
+
+
+                            <!--/stories-->
+
+
+
+
+                </div>
+            </div>
+
+
+
+        </div>
+        <!--/col-12-->
+        <hr>
+    </div>
+</div>
+
+
+

@@ -1,0 +1,154 @@
+<div id="masthead">  
+    <div class="container">
+      <div class="row">
+        <div class="col-md-7">
+          <h1>Books
+            <p class="lead"></p>
+          </h1>
+        </div>
+        <div class="col-md-5">
+          <div class="well well-lg"> 
+            <div class="row">
+              <div class="col-sm-12">
+                <p id="quote">" The only thing that you absolutely have to know, is the location of the library  "</p>
+                  <p id="quote1">-Albert Einstein</p>
+              
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> 
+    </div><!-- /cont -->
+    
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="top-spacer"> </div>
+        </div>
+      </div> 
+    </div><!-- /cont -->
+    
+  </div>
+  
+  
+  <div class="container">
+    <div class="row">
+      
+      <div class="col-md-12"> 
+        
+        <div class="panel">
+          <div class="panel-body">
+            
+            
+            
+           <div class="row">
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             
+              <!--/Add Book-->
+            <div class="center">
+              <h1>Add New Book</h1>
+              <form (ngSubmit)="addbook()" method="POST" [formGroup]="bookForm">
+                  <div class="txt_field">
+                      <input type="text" name="title" formControlName="title" required>
+                      <span></span>
+                      <label>Book Name</label>
+                  </div>
+                  <div class="txt_field">
+                      <input type="text" name="author" formControlName="author" required>
+                      <span></span>
+                      <label>Author</label>
+                  </div>
+                  <div class="txt_field">
+                      <input type="text" name="language" formControlName="language" required>
+                      <span></span>
+                      <label>Language</label>
+                  </div>
+                  <div class="txt_field">
+                      <input type="text" name="genre" formControlName="genre" required>
+                      <span></span>
+                      <label>Genre</label>
+                  </div>
+                  <div>
+                      <label id="book_img">Add Book Image</label>
+                      <br>
+                  
+                      <input type="file" name="image" accept="image/*" (change)="selectImage($event)" required>
+                      <br>
+                      
+                      <br>
+                  </div>
+                  <button type="submit" id="submit" value="Add Book"  >Add Book</button>
+
+                  <br>
+                  <br>
+                  <br>
+                  
+              </form>
+          </div>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>  
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>  
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>  
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <!--/Add Book-->
+           </div>
+            
+            
+          
+            
+          </div>
+        </div>
+                                                                                         
+  <hr>
+                                                      
+                                                        
+         </div><!--/col-12-->
+    </div>
+  </div>
+                                                  
+                                                                                  

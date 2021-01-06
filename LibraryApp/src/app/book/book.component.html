@@ -1,0 +1,95 @@
+<div id="masthead">  
+    <div class="container">
+      <div class="row">
+        <div class="col-md-7">
+          <h1>Book
+            <p class="lead"></p>
+          </h1>
+        </div>
+        <div class="col-md-5">
+          <div class="well well-lg"> 
+            <div class="row">
+              <div class="col-sm-12">
+                <p id="quote">" Libraries were full of ideas – perhaps the most dangerous and powerful of all weapons. "</p>
+                <p id="quote1">-Sarah J. Maas</p>
+              
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> 
+    </div><!-- /cont -->
+    
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="top-spacer"> </div>
+        </div>
+      </div> 
+    </div><!-- /cont -->
+    
+  </div>
+  
+  
+  <div class="container">
+    <div class="row">
+      
+      <div class="col-md-12"> 
+        
+        <div class="panel">
+          <div class="panel-body">
+            
+            
+            
+            <!--/stories-->
+            
+            <div class="row">    
+              <br>
+              <div class="col-md-2 col-sm-3 text-center">
+                <a class="story-title" href="#"><img alt="" src='../../assets/Images/{{singleBook.image}}' style="width:100px;height:100px" class="rounded-circle"></a>
+              </div>
+              <div class="col-md-8 col-sm-7">
+                <h3>{{singleBook.title}}</h3>
+                <div class="row">
+                    <div class="col-xs-9">
+                    <h4><span class="label label-default">{{singleBook.author}}</span></h4><h4>
+                    <small style="font-family:courier,'new courier';" class="text-muted">{{singleBook.genre}} • {{singleBook.language}}</small>
+                    </h4>
+                    </div>
+                </div>
+                <br>
+                <!-- <br> -->
+              </div>
+              <!-- <div class="col-md-8 col-sm-2 butt">
+                <button class="btn btn-primary">Edit</button>
+                <br>
+                <button class="btn btn-danger">Delete</button>
+
+              </div> -->
+              <div class="d-grid gap-2 justify-content-md-end butt col-md-11 col-sm-11">
+                <button class="btn btn-primary btn-sm" type="button" *ngIf="_auth.loggedIn() && _auth.getAdmin()" routerLink="/updateBook">Edit</button>
+                <button class="btn btn-danger btn-sm" type="button" *ngIf="_auth.loggedIn() && _auth.getAdmin()" (click)="deletebook()">Delete</button>
+              </div>
+              
+            </div>
+           
+            <hr>
+            
+  
+            <!--/stories-->
+            
+            
+          
+            
+          </div>
+        </div>
+                                                                                         
+                                                      
+                                                        
+         </div><!--/col-12-->
+  <hr>
+
+    </div>
+  </div>
+                                                  
+                                                                                  

@@ -1,0 +1,200 @@
+<div id="masthead">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7">
+                <h1>Library
+                    <p class="lead"></p>
+                </h1>
+            </div>
+            <div class="col-md-5">
+                <div class="well well-lg">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <p id="quote">" Whatever the cost of our libraries, the price is cheap compared to that of
+                                an ignorant nation. "</p>
+                            <p id="quote1">-Walter Cronkite</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- /cont -->
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="top-spacer"> </div>
+            </div>
+        </div>
+    </div>
+    <!-- /cont -->
+
+</div>
+
+<div class="container">
+    <div class="row">
+
+        <div class="col-md-12">
+
+            <div class="panel">
+                <div class="panel-body">
+                    
+                    
+                    <div class="row">
+                        <br>
+                        <div class="center">
+                            <h1>Signup</h1>
+                            <form (ngSubmit)="userRegister()" #registerForm="ngForm">
+                                <div class="txt_field">
+                                    <input type="text" id="name" name="name"  #name="ngModel" [(ngModel)]="userData.name" pattern="^[a-zA-Z]+$" required>
+                                    <span></span>
+                                    <label>Name</label>
+                                </div>
+                                <!-- {{name.errors.pattern | json}} -->
+                                <!-- {{name.invalid | json}} -->
+                                <!-- {{name.touched | json}} -->
+                                <div *ngIf="name.errors && (name.invalid && name.touched)">
+                                    <small class="text-danger" *ngIf="name.errors.required">Name is Required</small>
+                                    <small class="text-danger" *ngIf="name.errors.pattern">Name should contain characters only. Space not allowed</small>
+                                </div>
+                                <div class="txt_field">
+                                    <input type="text" id="email" name="email" #email="ngModel" [(ngModel)]="userData.email" pattern="^([a-zA-Z0-9\.\-]+)@([A-Za-z0-9\-]+)\.([a-z]{2,3})(\.[a-z]{2,3})?$" required>
+                                    <span></span>
+                                    <label>Email ID</label>
+                                    <div id="email_msg"></div>
+                                </div>
+                                <div *ngIf="email.errors && (email.invalid && email.touched)">
+                                    <small class="text-danger" *ngIf="email.errors.required">Email ID is required</small>
+                                    <small class="text-danger" *ngIf="email.errors.pattern">Invalid Email ID</small>
+                                </div>
+                                <div class="txt_field">
+                                    <input type="text" id="mobile" name="mobile" #mobile="ngModel" [(ngModel)]="userData.mobile" pattern="^[1-9]{1}[0-9]{9}$" required>
+                                    <span></span>
+                                    <label>Mobile Number</label>
+                                    <div id="mobile_msg"></div>
+                                </div>
+                                <!-- {{mobile.value | json}} -->
+                                <div *ngIf="mobile.errors && (mobile.invalid && mobile.touched)">
+                                    <small class="text-danger" *ngIf="mobile.errors.required">Mobile Number is required</small>
+                                    <small class="text-danger" *ngIf="mobile.errors.pattern">Mobile Number must be a valid 10 digit number</small>
+                                </div>
+                                <!-- Password Field and Template Validations Begins-->
+                                <div class="txt_field">
+                                    <input type="password" id="pass1" name="pwd" #pwd="ngModel" [(ngModel)]="userData.pwd" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" required>
+                                    <span></span>
+                                    <label>Enter Password</label>
+                                    <div id="pass1_msg"></div>
+                                </div>
+                                <div *ngIf="pwd.errors && (pwd.invalid && pwd.touched)">
+                                    <small class="text-danger" *ngIf="pwd.errors.required" >Password is Required</small>
+                                    <small class="text-danger" *ngIf="pwd.errors.pattern" >Invalid Password. Please Note:-Password should contain minimum 8 characters. It should contain atleast 1 lower case,1 uppercase,1 number and 1 special character</small>
+                                </div>
+                                <div class="txt_field">
+                                    <input type="password" id="pass2" name="Repwd" #Repwd="ngModel" [(ngModel)]="userData.Repwd" required>
+                                    <span></span>
+                                    <label>Re-enter Password</label>
+                                    <div id="pass2_msg"></div>
+                                </div>
+                                <div *ngIf="Repwd.invalid || Repwd.touched">
+                                    <small class="text-danger" [class.d-none]="Repwd.valid || Repwd.untouched">Confirm Password is Required</small>
+                                    <div *ngIf="Repwd.valid">
+                                        <small class="text-danger" *ngIf="Repwd.dirty && (pwd.value!=Repwd.value)">Password and Confirm Password do not match</small>
+                                    </div>
+
+                                </div>
+                                <!-- Password Field and Template Validations Ends-->
+
+                                <div class="pass" id="pass"><input type="checkbox" class="pass" id="check" name="check" #check="ngModel" [(ngModel)]="userData.check" required> I agree to
+                                    the terms and conditions</div>
+                                    
+                                    <small class="text-danger" [class.d-none]="check.valid || check.untouched">Please select the checkbox</small>
+
+                                <!-- <div *ngIf="check.re"> --> 
+                                    <!-- {{check.value | json}} -->
+                                <!-- </div> -->
+                                <button id="submit" type="submit" [disabled]="!registerForm.form.valid" value="Signup">Signup</button>
+                                <br>
+                                <br>
+                                <br>
+
+                            </form>
+                            
+                           <!-- {{mobile.invalid}} -->
+                        </div>
+                        <!-- <div class="row">
+                            <div class="col-md-3 offset-md-8 badge text-black-50 bg-secondary text-wrap " style="width: 10rem; text-align: left;padding-top: 10px; background-color: rgba(44, 121, 156, 0.137) !important;">
+                                <ul>
+                                    <li style="padding-bottom: 3px;">Name should contain only characters</li>
+                                    <li style="padding-bottom: 3px;">Email ID should be valid</li>
+                                    <li style="padding-bottom: 3px;">Mobile number should contain only 10 digits</li>
+                                    <li style="padding-bottom: 3px;"> Password should contain minimum 8 characters. It should contain atleast 1 lower case,1 uppercase,1 number and 1 special character </li> 
+                                </ul>
+                             </div>
+                        </div> -->
+
+
+
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <!-- <br>
+                        <br>
+                        <br>
+                        <br> -->
+                        
+                        
+                        
+                        <!--  -->
+                        <!-- <br> -->
+                        <!-- <br>
+                        <br>
+                        <br> -->
+
+                    </div>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <!-- <br> -->
+                    <!-- <br> -->
+                    <!-- <br> -->
+                    
+
+                    <!-- <hr> -->
+<br>
+                <!--/col-12-->
+            </div>
+        </div>
+
+
+
+
+        <hr>
+    </div>
+</div>
